@@ -1,16 +1,18 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  An awesome description would go here!
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: justldd
+title: Clean Blog
+email: your-email@yourdomain.com
+description: "Write your site description here. It will be used as your sites meta description as well!"
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: SBootstrap
 github_username:  ldd
+facebook_username:  IronSummitMedia
+comments: true
 
 # Build settings
 markdown: kramdown
-comments :
-  provider : disqus
-  disqus :
-    short_name : justldd
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["node_modules"]
+# highlighter: rouge

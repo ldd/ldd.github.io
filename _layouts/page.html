@@ -1,14 +1,47 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{{ page.header-img }}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <span class="subheading">{{ page.description }}</span>
+                    <hr class="small">
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+                    <ul class="list-inline intro-social-buttons">
+                        
+                        <li>
+                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-medium"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Windows</span></a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-medium"><i class="fa fa-github fa-fw"></i> <span class="network-name">Mac</span></a>
+                        </li>
+                        
+                        <li>
+                            <a href="" class="btn btn-default btn-medium"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linux</span></a>
+                        </li>
+                        
+                    </ul>
 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			{{ content }}
+		</div>
+	</div>
 </div>
+
+<hr>
