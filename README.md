@@ -1,4 +1,5 @@
 #Clean Blog by Start Bootstrap - Jekyll Version
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ldd/ldd.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
 
