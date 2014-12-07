@@ -3,6 +3,7 @@ title: Ldd's Blog
 email: leonardoldd@gmail.com
 twitter_username: _ldd
 github_username:  ldd
+base_url: "ldd.github.io"
 
 # Build settings
 markdown: kramdown
