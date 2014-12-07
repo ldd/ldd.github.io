@@ -3,13 +3,10 @@ title: Ldd's Blog
 email: leonardoldd@gmail.com
 twitter_username: _ldd
 github_username:  ldd
-baseurl: "ldd.github.io"
-url: ""
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 paginate: 5
 exclude: ["node_modules"]
-#highlighter: rouge
-#baseurl: ""
+#highlighter: rouge //fix for windows (probably not needed anymore)
