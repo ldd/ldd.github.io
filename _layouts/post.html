@@ -42,11 +42,9 @@ layout: default
 
                 <hr>
 
-                {% if comments %}
-                lol
+                {% if page.no-comments %}
+                    <p class="text-muted">Comments have been disabled for this post </p>
                 {% else %}
-                xD
-                {% endif %}
                     <div id="disqus_thread"></div>
                     <script type="text/javascript">
                         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -60,6 +58,14 @@ layout: default
                         })();
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                {% endif %}
+
+                {% if page.highlight-code %}
+                <script type="text/javascript">
+                     SyntaxHighlighter.all();
+                </script>
+                {% endif %}
+
             </div>
         </div>
     </div>
