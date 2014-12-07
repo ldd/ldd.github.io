@@ -4,7 +4,7 @@ email: leonardoldd@gmail.com
 twitter_username: _ldd
 github_username:  ldd
 baseurl: "ldd.github.io"
-url: "ldd.github.io"
+url: ""
 
 # Build settings
 markdown: kramdown
