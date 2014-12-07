@@ -41,29 +41,36 @@ layout: default
                 </ul>
 
                 <hr>
+                {% if page.highlight-code %}
+                <script type="text/javascript">
+                     SyntaxHighlighter.all();
+                </script>
+                {% endif %}
 
                 {% if page.no-comments %}
                     <p class="text-muted">Comments have been disabled for this post </p>
                 {% else %}
                     <div id="disqus_thread"></div>
                     <script type="text/javascript">
-                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                        var disqus_shortname = 'justldd'; // required: replace example with your forum shortname
-
+                        var disqus_shortname = 'justldd'; 
                         /* * * DON'T EDIT BELOW THIS LINE * * */
                         (function() {
-                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            var ds_loaded = false;
+                            var top = $("#disqus_thread").offset().top;
+                            var check = function(){
+                                if (!ds_loaded && $(window).scrollTop() + $(window).height() > top){
+                                    ds_loaded = true;
+                                    var dsq = document.createElement('script');
+                                    dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                }
+                            };
+                            $(window).scroll(check);
+                            check();
                         })();
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                {% endif %}
-
-                {% if page.highlight-code %}
-                <script type="text/javascript">
-                     SyntaxHighlighter.all();
-                </script>
                 {% endif %}
 
             </div>
