@@ -14308,7 +14308,7 @@ THE SOFTWARE.
             this.quadShader = me.video.shader.createShader(
                 this.gl,
                 (function anonymous(ctx){var out='precision highp float;attribute vec2 aVertex;attribute vec4 aColor;attribute float aTexture;attribute vec2 aRegion;uniform mat3 uMatrix;varying vec4 vColor;varying float vTexture;varying vec2 vRegion;void main(void){gl_Position=vec4((uMatrix*vec3(aVertex,1)).xy,0,1);vColor=aColor;vTexture=aTexture;vRegion=aRegion;}';return out;})(),
-                (function anonymous(ctx){var out='precision '+(ctx.precision)+' float;uniform sampler2D uSampler['+(ctx.maxTextures)+'];uniform vec2 Resolution;uniform vec4 AmbientColor;uniform vec3 LightPos;uniform vec4 LightColor;uniform vec3 Falloff;uniform float LightSize;varying vec4 vColor;varying float vTexture;varying vec2 vRegion;void main(void){int texture=int(vTexture);vec4 DiffuseColor;vec3 NormalMap;if(texture==0){DiffuseColor=texture2D(uSampler[0],vRegion);NormalMap=texture2D(uSampler[0],vRegion.st+vec2(0.5,0.0)).rgb;}';for(var i=1;i<ctx.maxTextures-1;i++){out+='else if(texture=='+(i)+'){DiffuseColor=texture2D(uSampler['+(i)+'],vRegion);NormalMap=texture2D(uSampler['+(i)+'],vRegion.st+vec2(0.5,0.0)).rgb;}';}out+='else{DiffuseColor=texture2D(uSampler['+(ctx.maxTextures-1)+'],vRegion);NormalMap=texture2D(uSampler['+(ctx.maxTextures-1)+'],vRegion.st+vec2(0.5,0.0)).rgb;}vec3 LightDir=vec3(LightPos.xy-(gl_FragCoord.xy/Resolution.xy),LightPos.z);LightDir.x/=(LightSize/Resolution.x);LightDir.y/=(LightSize/Resolution.y);float D=length(LightDir);vec3 N=normalize(NormalMap*2.0-1.0);vec3 L=normalize(LightDir);N=mix(N,vec3(0),0.5);float df=max(dot(N,L),0.0);vec3 Diffuse=(LightColor.rgb*LightColor.a)*df;vec3 Ambient=AmbientColor.rgb*AmbientColor.a;float Attenuation=1.0/(Falloff.x+(Falloff.y*D)+(Falloff.z*D*D));if(Attenuation<0.4)Attenuation=0.0;else if(Attenuation<0.6)Attenuation=0.6;else if(Attenuation<0.8)Attenuation=0.8;else Attenuation=1.0;vec3 Intensity=Ambient+Diffuse*Attenuation;vec3 FinalColor=DiffuseColor.rgb*Intensity;gl_FragColor=vColor*vec4(FinalColor,DiffuseColor.a);}';return out;})({
+                (function anonymous(ctx){var out='precision '+(ctx.precision)+' float;uniform sampler2D uSampler['+(ctx.maxTextures)+'];uniform vec2 Resolution;uniform vec4 AmbientColor;uniform vec3 LightPos;uniform vec4 LightColor;uniform vec3 Falloff;uniform float LightSize;varying vec4 vColor;varying float vTexture;varying vec2 vRegion;void main(void){int texture=int(vTexture);vec4 DiffuseColor;vec3 NormalMap;if(texture==0){DiffuseColor=texture2D(uSampler[0],vRegion);NormalMap=texture2D(uSampler[0],vRegion.st+vec2(0.5,0.0)).rgb;}';for(var i=1;i<ctx.maxTextures-1;i++){out+='else if(texture=='+(i)+'){DiffuseColor=texture2D(uSampler['+(i)+'],vRegion);NormalMap=texture2D(uSampler['+(i)+'],vRegion.st+vec2(0.5,0.0)).rgb;}';}out+='else{DiffuseColor=texture2D(uSampler['+(ctx.maxTextures-1)+'],vRegion);NormalMap=texture2D(uSampler['+(ctx.maxTextures-1)+'],vRegion.st+vec2(0.5,0.0)).rgb;}vec3 LightDir=vec3(LightPos.xy-(gl_FragCoord.xy/Resolution.xy),LightPos.z);LightDir.x/=(LightSize/Resolution.x);LightDir.y/=(LightSize/Resolution.y);float D=length(LightDir);vec3 N=normalize(NormalMap*2.0-1.0);vec3 L=normalize(LightDir);N=mix(N,vec3(0),0.5);float df=max(dot(N,L),0.0);vec3 Diffuse=(LightColor.rgb*LightColor.a)*df;vec3 Ambient=AmbientColor.rgb*AmbientColor.a;float Attenuation=1.0/(Falloff.x+(Falloff.y*D)+(Falloff.z*D*D));vec3 Intensity=Ambient+Diffuse*Attenuation;vec3 FinalColor=DiffuseColor.rgb*Intensity;gl_FragColor=vColor*vec4(FinalColor,DiffuseColor.a);}';return out;})({
                     "precision"     : precision,
                     "maxTextures"   : this.maxTextures
                 })
@@ -14383,11 +14383,11 @@ THE SOFTWARE.
 
 
             this.quadShader.uniforms.Resolution = [800, 600];
-            this.quadShader.uniforms.AmbientColor = [0.8, 0.8, 0.8, 0.7];
+            this.quadShader.uniforms.AmbientColor = [0.8, 0.8, 0.8, 0.2];
             this.quadShader.uniforms.LightPos = [0, 0, 0.075];
             this.quadShader.uniforms.LightColor = [1.0, 1.0, 1.0, 1.0];
-            this.quadShader.uniforms.Falloff = [0.2, 7.0, 30.0];
-            this.quadShader.uniforms.LightSize = 3000;
+            this.quadShader.uniforms.Falloff = [0.1, 7.0, 45.0];
+            this.quadShader.uniforms.LightSize = 5500;
         },
 
         /**

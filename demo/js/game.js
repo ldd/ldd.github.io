@@ -94,9 +94,9 @@ var game = {
         });
 
         me.event.subscribe(me.event.MOUSEMOVE, function (e) {
-            var x = e.pageX/800;
-            var y = 1 - e.pageY/600;
-            me.video.renderer.compositor.quadShader.uniforms.LightPos = [x, y, 0.075];
+            var x = e.gameWorldX/800;
+            var y = 1 - e.gameWorldY/600;
+            me.video.renderer.compositor.quadShader.uniforms.LightPos = [x, y, 0.05];
         });
         // switch to PLAY state
         me.state.change(me.state.PLAY);
