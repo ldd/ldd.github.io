@@ -4,12 +4,11 @@ title:      "Tutorial Part 3: Adding our main Player"
 subtitle:   "Action at last"
 date:       2014-12-06 12:00:00
 author:     "Ldd"
-highlight-code: true
 ---
 
 <p>
 Let's add a character now. The first change we will do is to add our character sheet to the resources.js file.
-<pre class="brush: js">
+{% highlight javascript %}
 game.resources = [
 
     /* Graphics.
@@ -26,7 +25,7 @@ game.resources = [
     
     //more commented out code goes here
 ];
-</pre>
+{% endhighlight %}
 <span class="caption text-muted">Changing the resources.js file</span>
 </p>
 
@@ -42,7 +41,7 @@ we do the following:
 <li><b>line 12:</b>we ensure that the player is updated AND collisions work outside of the viewport</li>
 <li><b>line 14-19:</b>we set up basic animations for walking left, up, down or standing still</li>
 </ul>
-<pre class="brush: js">
+{% highlight javascript %}
 init:function (x, y, settings) {
     // call the constructor
     this._super(me.Entity, 'init', [x, y , settings]);
@@ -67,12 +66,12 @@ init:function (x, y, settings) {
     // set the standing animation as default
     this.renderable.setCurrentAnimation("stand");
 },
-</pre>
+{% endhighlight %}
 <span class="caption text-muted">Changing the init in entities.js file</span>
 </p>
 <p>
 We need to change the update function of the player too, so 
-<pre class="brush: js"> 
+{% highlight javascript %} 
 update : function (dt) {
     if (me.input.isKeyPressed('left')) {
         // flip the sprite on horizontal axis
@@ -122,13 +121,13 @@ update : function (dt) {
     // return true if we moved or if the renderable was updated
     return (this._super(me.Entity, 'update', [dt]) || this.body.vel.x !== 0 || this.body.vel.y !== 0);
 },
-</pre>
+{% endhighlight %}
 <span class="caption text-muted">Changing the update function in entities.js file</span>
 </p>
 
 <p>
 In game.js, we simply register our key functions.
-<pre class="brush: js"> 
+{% highlight javascript %} 
 "loaded" : function () {
     me.state.set(me.state.MENU, new game.TitleScreen());
     me.state.set(me.state.PLAY, new game.PlayScreen());
@@ -145,14 +144,14 @@ In game.js, we simply register our key functions.
     // Start the game.
     me.state.change(me.state.PLAY);
 }
-</pre>
+{% endhighlight %}
 <span class="caption text-muted">Changing the loaded function in game.js file</span>
 </p>
 
 <p>
 Most important change of all: we need to cancel out the gravity in the world. Otherwise, our player would literally fall off the edge of the world.
 Luckily for us, in melonJS, it suffices to set me.sys.gravity to 0 in order to do this.
-<pre class="brush: js"> 
+{% highlight javascript %} 
 onResetEvent: function() {
     //set gravity to 0
     me.sys.gravity = 0;
@@ -167,7 +166,7 @@ onResetEvent: function() {
     this.HUD = new game.HUD.Container();
     me.game.world.addChild(this.HUD);
 },
-</pre>
+{% endhighlight %}
 <span class="caption text-muted">Changing the onResetEvent function in play.js file</span>
 </p>
 

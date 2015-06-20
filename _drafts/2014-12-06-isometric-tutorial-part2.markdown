@@ -4,14 +4,13 @@ title:      "Tutorial Part 2: Loading our Tiled Map"
 subtitle:   "melonJS to the rescue!"
 date:       2014-12-06 12:00:00
 author:     "Ldd"
-highlight-code: true
 ---
 
 <i>I'll assume that you have followed the melonJS tutorial or that at least you know how to handle the "cross-origin request" issue</i>
 
 <p>
 The first change we will do is telling melonJS what to load and where that is located. To do so, we edit the resources.js file.
-<pre class="brush: js">
+{% highlight javascript %}
 game.resources = [
 
     /* Graphics.
@@ -30,14 +29,14 @@ game.resources = [
     
     //more commented out code goes here
 ];
-</pre>
+{% endhighlight %}
 <span class="caption text-muted">Changing the resources.js file</span>
 As you can see, if you followed the melonJS platformer tutorial, we simply declare the source of our files.
 </p>
 
 <p>
 Next, we tell melonJS to actually use our level in game.js
-<pre class="brush: js">
+{% highlight javascript %}
 game.PlayScreen = me.ScreenObject.extend({
     /**
      *  action to perform on state change
@@ -63,7 +62,7 @@ game.PlayScreen = me.ScreenObject.extend({
         me.game.world.removeChild(this.HUD);
     }
 });
-</pre>
+{% endhighlight %}
 <span class="caption text-muted">Changing the game.js file</span>
 </p>
 <p>
