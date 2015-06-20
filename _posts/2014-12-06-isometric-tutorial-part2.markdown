@@ -4,7 +4,6 @@ title:      "Tutorial Part 2: Loading our Tiled Map"
 subtitle:   "melonJS to the rescue!"
 date:       2014-12-06 12:00:00
 author:     "Ldd"
-header-img: "img/post-bg-04.jpg"
 highlight-code: true
 ---
 

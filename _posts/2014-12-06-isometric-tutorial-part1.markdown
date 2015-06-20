@@ -4,7 +4,6 @@ title:      "Tutorial Part 1: Setting up the Tiled Map"
 subtitle:   "Creating the map for the game"
 date:       2014-12-06 12:00:00
 author:     "Ldd"
-header-img: "img/post-bg-04.jpg"
 ---
 
 <i>I'll assume that you have followed the Tiled tutorial and you feel comfortable using Tiled. Feel free to skip this section if you are using the default taco.tmx file</i>

@@ -4,7 +4,6 @@ title:      "Tutorial Part 3: Adding our main Player"
 subtitle:   "Action at last"
 date:       2014-12-06 12:00:00
 author:     "Ldd"
-header-img: "img/post-bg-04.jpg"
 highlight-code: true
 ---
 

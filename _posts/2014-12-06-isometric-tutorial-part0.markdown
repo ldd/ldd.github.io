@@ -4,7 +4,6 @@ title:      "Tutorial: <br> Creating a basic isometric HTML5 game (using melonJS
 subtitle:   "Using simple textures and some javascript, I will show you how to build a working isometric game."
 date:       2014-12-06 12:00:00
 author:     "Ldd"
-header-img: "img/post-bg-04.jpg"
 ---
 
 <p>In this tutorial I will show you how to make a very simple HTML5 isometric game.</p>
