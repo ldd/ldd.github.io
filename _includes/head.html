@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
 
     {% if page.highlight-code %}
-
     <!-- SyntaxHighlighter CSS and Javascript-->
     <link rel="stylesheet" href="{{ "/css/shCore.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/shThemeRDark.css" | prepend: site.baseurl }}">
@@ -24,9 +23,10 @@
     <script src="{{ "/js/shBrushJScript.js " | prepend: site.baseurl }}"></script>
     {% endif %}
 
+    {% if page.jquery == undefined or page.jquery == true or page.no-comments == true %}
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
+    {% endif %}
 
     <!-- Pygments Github CSS -->
     <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
