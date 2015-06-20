@@ -1,6 +1,6 @@
 ---
 layout:     simple
-title:      "Extra"
+title:      "(MelonJS) dynamic lighting"
 subtitle:   "Extra"
 date:       2015-02-06 12:00:00
 author:     "Ldd"
