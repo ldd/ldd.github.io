@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "(FAQ) Maggies:Prelude FAQ"
+title: "Maggies:Prelude FAQ"
 description: ""
-category: "personal"
-tags: ["FAQ"]
+tags: ["faq"]
 ---
 <ul>
 <li id="question0"><b>Q: What is this game?</b></li>

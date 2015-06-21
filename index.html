@@ -8,7 +8,7 @@ jquery: false
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
-            {{ post.title }}
+             {{ post.title }}
         </h2>
         {% if post.subtitle %}
         <h3 class="post-subtitle">
@@ -16,6 +16,12 @@ jquery: false
         </h3>
         {% endif %}
     </a>
+     <h5>
+     {%for tag in post.tags %}
+     <a href="{{tag | prepend: site.baseurl | prepend: "tag/"}}" class="label label-default label-tags">{{tag}}</a>
+     {% endfor %}
+     </h5>
+
     <p class="post-meta">Posted {% if post.author %}by {{ post.author }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>

@@ -1,6 +1,7 @@
 # Site settings
 title: "Maggies: Prelude"
 email: leonardoldd@gmail.com
+author: ldd
 twitter_username: _ldd
 github_username:  ldd
 base_url: "ldd.github.io"
@@ -9,6 +10,6 @@ base_url: "ldd.github.io"
 markdown: kramdown
 permalink: pretty
 paginate: 5
-exclude: ["node_modules"]
+exclude: ["node_modules", "README.md", "LICENSE", "package.json", "RAKEFILE", "Gruntfile.js"]
 excerpt_separator: "" #workaround for "tag was never closed"
 #highlighter: rouge //fix for windows (probably not needed anymore)

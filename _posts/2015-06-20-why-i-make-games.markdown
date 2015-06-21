@@ -1,8 +1,7 @@
 ---
 layout: post
-title: "(Personal) Why are you making this game?"
+title: "Why are you making this game?"
 description: ""
-category: "personal"
 tags: ["personal"]
 ---
 Let's first answer a related question.
