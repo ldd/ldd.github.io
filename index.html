@@ -1,6 +1,6 @@
 ---
 layout: page
-description: "Maggies: Prelude"
+description: "Development Blog"
 jquery: false
 ---
 
@@ -16,7 +16,7 @@ jquery: false
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="post-meta">Posted {% if post.author %}by {{ post.author }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
 {% endfor %}
