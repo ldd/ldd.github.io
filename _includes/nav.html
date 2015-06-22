@@ -9,20 +9,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-left">
                 <li>
                     <a href="{{ site.baseurl }}/">Home</a>
                 </li>
+                <!-- forum link goes here -->
+                <li>
+                    <a href="{{ "/forums" | prepend: site.baseurl }}">Forums</a>
+                </li>
+
                 {% for page in site.pages %}
                 <li>
                     {% if page.title %}<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
                 </li>
                 {% endfor %}
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
