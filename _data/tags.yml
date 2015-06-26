@@ -4,3 +4,5 @@ personal:
   name: Personal
 demo:
   name: Demo
+weeklyUpdate:
+  name: weeklyUpdate
