@@ -7,7 +7,7 @@ tags: ["weeklyUpdate"]
 This will be an even shorter weekly update but I have been stuck this weekly
 trying to handle enemy alliances and combat.
 
-Combat right now follows a basic FFXII-like gambit system, where the health is not in HP (hit points)
+Combat right now follows a basic "FFXII-like" gambit system, where the health is not in HP (hit points)
 but as a function of the state of internal organs of an entity.
 
 So next week I will entirely focus on combat and by then I should have a public trello that anyone can follow.
