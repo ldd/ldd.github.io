@@ -1,10 +1,9 @@
 ---
+published: false
+title: World building: alliances
 layout: post
-title: "World building: alliances"
-description: ""
 tags: ["weeklyUpdate"]
 ---
-
 In this first weekly update I'd like to talk about the world in Maggies: Prelude.
 
 I plan on making a longer post about world building in general, including ideas about 
