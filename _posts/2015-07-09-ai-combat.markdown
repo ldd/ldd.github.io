@@ -1,7 +1,7 @@
 ---
+published: true
+title: AI: combat
 layout: post
-title: "AI: combat"
-description: ""
 tags: ["weeklyUpdate"]
 ---
 This will be an even shorter weekly update but I have been stuck this weekly
